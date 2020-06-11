@@ -42,3 +42,34 @@ Input Format: external_gaps.run(input_file_name, word_vector_model)
 Word Vector Model: Pretrained model avaiable at https://github.com/parasKumarSahu/Knolml-Analysis/blob/master/Text-Segmentation/wrdvecs-text8.bin
 
 Example: external_gaps.run("GeneralScience.txt", "wrdvecs-text8.bin")
+
+## Analysis5: Finding internal knowledge gap in a wikipedia article
+Internal Knowledge Gap arise due to difficulty in understanding of an article. We define various readability prameter and compute them for thousands of articles to study how these parameters affect the overall readability of a wikipedia article.
+
+To download featured articles(sorted by page views):-
+
+Module: from kml_analysis_pkg import downloader_featured
+
+Input Format: downloader_featured.run(path_of_html_file)
+
+html_file avaiable at https://github.com/parasKumarSahu/Knolml-Analysis/tree/master/Wiki%20Featured%20Articles%20Downloader
+
+Example: downloader_featured.run("Wikipedia Featured articles - Wikipedia.htm")
+
+To download B, C, GA, Start and Stub articles:-
+
+Module: from kml_analysis_pkg import downloader_from_titles
+
+Input Format: downloader_from_titles.run(path_of_file_containing_list_of_articles)
+
+Example: downloader_from_titles.run("B")
+
+To calaculate readability parameters:-
+
+Module: kml_analysis_pkg import internal_gaps
+
+Input Format: internal_gaps.run(path_of_folder_containing_articles, word_vector_model)
+
+Word Vector Model: Pretrained model avaiable at https://github.com/parasKumarSahu/Knolml-Analysis/blob/master/Text-Segmentation/wrdvecs-text8.bin
+
+Example: internal_gaps.run("test", "wrdvecs-text8.bin")
