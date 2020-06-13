@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="kml-analysis-parasKumarSahu", 
-    version="0.1.0",
+    version="0.1.1",
     author="Paras Kumar",
     author_email="paraskumardavhehal1@gmail.com",
     description="Wikipedia Analysis Toolkit",
